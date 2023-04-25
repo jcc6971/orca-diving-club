@@ -1,0 +1,90 @@
+
+
+body {
+  min-height: 100vh;
+  background: url(../images/piscinelight.jpg) center/cover;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  cursor: none;
+  z-index: 1;
+}
+.divcursor{
+  /*border: red 2px solid;*/
+  width: 80px;
+  height:80px;
+  
+  background:url("../images/curseur2.png") center/cover;
+  position: absolute;
+}
+
+nav {
+  border-radius: 50px;  
+  box-shadow: 2px 2px 14px white;
+  background-color: rgb(255 187 78 / 6%);
+  position: fixed;  
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
+  z-index: 1;
+}
+.navbar {
+  display: flex;
+  justify-content: center;
+}
+nav a {
+  font-weight: 800;
+  color: rgb(255, 187, 78);
+  text-decoration: none;
+  text-shadow: 4px 6px 7px black;
+}
+
+a:hover {
+  color: rgb(0, 182, 182);
+}
+
+main{
+  margin-top: 50px;
+}
+main,
+a {
+ 
+  color: rgb(255, 187, 78);
+}
+h1{
+  text-align: center;
+  color: blanchedalmond;
+}
+p {
+  
+  font-size: 1rem;
+  text-align: center;
+  color: blanchedalmond;
+}
+.lienlifras{
+  z-index: 1;
+  height: 50px;
+  position: relative;
+}
+.contactez{
+  position: relative;
+  z-index: 1;
+}
+.lifras{
+  position: absolute;
+  top:-7px
+  
+}
+
+.lifras img {
+  width: 10vh;
+}
+
+@media screen and (max-width: 900px) {
+  nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  main {
+    margin-top: 135px;
+  }
+}

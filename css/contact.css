@@ -1,0 +1,132 @@
+
+
+body{
+    min-height: 100vh;
+    background: url(../images/fondpiscine.jpg) center/cover;
+    background-attachment: fixed;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    cursor:none;
+}
+.divcursor{
+  /*border: red 2px solid;*/
+  width: 80px;
+  height:80px;
+  
+  background:url("../images/curseur2.png") center/cover;
+  position: absolute;
+}
+
+nav {
+  border-radius: 50px;
+  background-color: rgba(8, 8, 8, 0.389);
+  box-shadow: 3px 4px 9px 1px black;
+  position: fixed;
+  width: 80%;
+  
+  display: flex;
+  justify-content: space-around;
+  z-index: 1;
+}
+.navbar {
+  display: flex;
+  justify-content: center;
+}
+  nav a {
+    color: rgb(255, 187, 78);
+    text-decoration: none;
+    text-shadow: 4px 6px 7px black;
+    font-weight: 800;
+  }
+  
+  a:hover {
+    color: rgb(0, 182, 182);
+  }
+  main{
+   
+    margin-top: 50px;
+   
+    text-align: center;
+    color: blanchedalmond;
+    text-decoration: none;
+
+  }
+  main>a{
+   
+    text-align: center;
+    color: rgb(255, 187, 78);
+    text-decoration: none;
+    animation-duration: 1s;
+  animation-name: clignoter;
+  animation-iteration-count: infinite;
+  transition: 2s;
+  }
+  h1{
+    text-align: center;
+    color: blanchedalmond; 
+    
+  }
+  p {
+    text-align: center;
+    color: blanchedalmond;
+    }
+    .tarifcond a {
+       position: relative;
+    z-index: 1; 
+      text-align: center;
+    color: rgb(255, 187, 78);
+    text-decoration: none;
+    animation-duration: 1s;
+  animation-name: clignoter;
+  animation-iteration-count: infinite;
+  transition: 2s;
+    }
+
+    .docutile a {
+       position: relative;
+    z-index: 1; 
+      text-align: center;
+    color: rgb(255, 187, 78);
+    text-decoration: none;
+    animation-duration: 1s;
+  animation-name: clignoter;
+  animation-iteration-count: infinite;
+  transition: 2s;
+    }
+    
+  iframe{
+    display: block;
+    position: relative;
+    margin: auto;
+  }
+  @media screen and (max-width: 900px) {
+  nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  iframe {
+    width: 60%;
+    height: 60%;
+  }
+  main{
+    margin-top: 140px;
+  }
+  nav
+  {background-color: rgba(8, 8, 8, 0.750);}
+}
+@keyframes clignoter {
+  0% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 1;
+  }
+  
+}
+footer p{
+  font-size: 0.8rem;
+  color: coral;
+}
