@@ -86,9 +86,14 @@ ul {
   }
 }
 li {
+  position: relative;
   z-index: 5;
 }
 .card {
+  position: absolute;
+  left: 420px;
+  top: -50px;
+
   padding: 10px 20px;
   border: 1px solid #b3c9ce;
   border-radius: 4px;
