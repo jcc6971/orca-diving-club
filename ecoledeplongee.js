@@ -2,8 +2,9 @@ function cardcreate() {
   popup = document.createElement("div");
   popup.className = "popup";
   popup.innerHTML = `
-    <i class="fa-regular fa-xmark" id="croix" ></i>
-    <h3></h3>
+    
+  <i class="fa-regular fa-circle-xmark fa-lg" id="croix"></i>
+    
     <p> ce niveau permet de plonger jusque 20m accompagné d'un moniteur ou 15m accompagné d'un plongeur 3*
     `;
 }

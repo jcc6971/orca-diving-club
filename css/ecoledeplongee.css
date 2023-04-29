@@ -100,7 +100,7 @@ li {
   z-index: 200;
   position: absolute;
   transform: translateX(-50%);
-  width: 250px;
+  width: 300px;
   left: 50%;
   top: -100px;
   margin: 0;
@@ -116,4 +116,9 @@ li {
 .popup,
 p {
   color: black;
+  margin: 0;
+}
+#croix {
+  margin: 0;
+  padding: 0;
 }
