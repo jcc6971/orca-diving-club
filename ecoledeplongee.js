@@ -1,15 +1,15 @@
-function cardcreate() {
-  popup = document.createElement("div");
-  popup.className = "popup";
-  popup.innerHTML = `
-    
-  <i class="fa-regular fa-circle-xmark fa-lg" id="croix"></i>
-    
-    <p> ce niveau permet de plonger jusque 20m accompagné d'un moniteur ou 15m accompagné d'un plongeur 3*
-    `;
-}
-
 if (window.matchMedia("(max-width: 700px)").matches) {
+  function cardcreate() {
+    popup = document.createElement("div");
+    popup.className = "popup";
+    popup.innerHTML = `
+      
+    <i class="fa-regular fa-circle-xmark fa-lg" id="croix"></i>
+      
+      <p> ce niveau permet de plonger jusque 20m accompagné d'un moniteur ou 15m accompagné d'un plongeur 3*
+      `;
+  }
+
   // Viewport is less or equal to 700 pixels wide
   async function affichage() {
     await cardcreate();
@@ -32,20 +32,54 @@ if (window.matchMedia("(max-width: 700px)").matches) {
   affichage();
 } else {
   // Viewport is greater than 700 pixels wide
-  document.querySelectorAll(".fa-circle-info").forEach((niveau) => {
-    niveau.addEventListener("mouseover", () => {
-      card = document.createElement("div");
-      card.className = "card";
-      card.innerHTML = "hello";
 
-      niveau.append(card);
-      // console.log(card);
+  function cardcreate() {
+    popup = document.createElement("div");
+    popup.className = "popup";
+    popup.innerHTML = `
+      
+    
+      
+      <p> ce niveau permet de plonger jusque 20m accompagné d'un moniteur ou 15m accompagné d'un plongeur 3*
+      `;
+  }
+
+  async function affichage() {
+    await cardcreate();
+
+    info = document.querySelectorAll(".fa-circle-info");
+    info.forEach((list) => {
+      list.addEventListener("mouseover", () => {
+        list.append(popup);
+        list.addEventListener("mouseout", () => {
+          setTimeout(() => {
+            popup.remove();
+          }, 2);
+        });
+      });
     });
-    niveau.addEventListener("mouseout", () => {
-      card.remove();
-    });
-  });
+  }
+  affichage();
 }
+
+//   document.querySelectorAll(".fa-circle-info").forEach((niveau) => {
+//     niveau.addEventListener("mouseover", () => {
+//       card = document.createElement("div");
+//       card.className = "popup";
+//       card.innerHTML = `
+
+//       <i class="fa-regular fa-circle-xmark fa-lg" id="croix"></i>
+
+//         <p> ce niveau permet de plonger jusque 20m accompagné d'un moniteur ou 15m accompagné d'un plongeur 3*
+//         `;
+
+//       niveau.append(card);
+//       // console.log(card);
+//     });
+//     niveau.addEventListener("mouseout", () => {
+//       card.remove();
+//     });
+//   });
 
 // function cardcreate() {
 //   card = document.createElement("div");

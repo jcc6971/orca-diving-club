@@ -73,7 +73,7 @@ ul {
 }
 li {
   position: relative;
-  margin: 0 auto;
+  margin: 5px auto;
 
   /* z-index: 5; */
 }
