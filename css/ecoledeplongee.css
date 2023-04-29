@@ -97,7 +97,10 @@ li {
 }
 
 .popup {
-  width: 150%;
+  z-index: 200;
+  position: absolute;
+  transform: translateX(-50%);
+  width: 250px;
   left: 50%;
   top: -100px;
   margin: 0;
