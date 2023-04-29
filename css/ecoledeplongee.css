@@ -1,6 +1,6 @@
 body {
   min-height: 100vh;
-  background: url(./images/ecole.jpg) center/cover;
+  background: url(../images/ecole.jpg) center/cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
