@@ -92,7 +92,7 @@ li {
     background-color: rgba(8, 8, 8, 0.75);
   }
   li {
-    width: 70%;
+    margin: 5px auto;
   }
 }
 
