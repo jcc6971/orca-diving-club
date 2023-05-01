@@ -18,8 +18,6 @@ if (window.matchMedia("(max-width: 700px)").matches) {
     info = document.querySelectorAll(".fa-circle-info");
     info.forEach((list) => {
       list.addEventListener("click", (e) => {
-        const plonger = e.srcElement.parentNode.innerText.replace(" ", "-");
-
         if (e.srcElement.parentNode.innerText.includes("Plongeur 1*"))
           aecrire = p1;
         else if (e.srcElement.parentNode.innerText.includes("Plongeur 2*"))
@@ -54,12 +52,6 @@ if (window.matchMedia("(max-width: 700px)").matches) {
   function cardcreate() {
     popup = document.createElement("div");
     popup.className = "popup";
-    popup.innerHTML = `
-      
-    
-      
-      <p> ce niveau permet de plonger jusque 20m accompagné d'un moniteur ou 15m accompagné d'un plongeur 3*
-      `;
   }
 
   async function affichage() {
@@ -67,7 +59,20 @@ if (window.matchMedia("(max-width: 700px)").matches) {
 
     info = document.querySelectorAll(".fa-circle-info");
     info.forEach((list) => {
-      list.addEventListener("mouseover", () => {
+      list.addEventListener("mouseover", (e) => {
+        if (e.srcElement.parentNode.innerText.includes("Plongeur 1*"))
+          aecrire = p1;
+        else if (e.srcElement.parentNode.innerText.includes("Plongeur 2*"))
+          aecrire = p2;
+        if (e.srcElement.parentNode.innerText.includes("Plongeur 3*"))
+          aecrire = p3;
+        else if (e.srcElement.parentNode.innerText.includes("Plongeur 4*"))
+          aecrire = p4;
+        popup.innerHTML = `
+
+
+          <p> ${aecrire} </p>
+          `;
         list.append(popup);
         list.addEventListener("mouseout", () => {
           setTimeout(() => {
